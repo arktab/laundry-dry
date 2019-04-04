@@ -1,0 +1,80 @@
+.location {
+    .container {
+
+        .header__row {
+            justify-content: center;
+
+            .location__header {
+                text-align: center;
+                font-size: 36px;
+                color: $cllblue;
+                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+                margin-bottom: 100px;
+                padding: 10px 0;
+            }
+        }
+
+        .location__row {
+            align-items: center;
+            height: 560px;
+
+            .location__wrapper {
+                height: 100%;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                .location__map {
+                    height: 100%;
+                    width: 75%;
+                    background: url('../images/map.png') no-repeat center center;
+                    box-sizing: cover;
+                    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+
+                    .map__button {
+                        color: $white;
+                        background: $cllblue;
+                        width: 150px;
+                        height: 40px;
+                        margin: 20px;
+                    }
+                }
+
+                .info__wrapper {
+                    height: 95%;
+                    width: 25%;
+
+                    .location__info {
+                        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+                        display: -webkit-flex;
+                        display: -moz-flex;
+                        display: -ms-flex;
+                        display: -o-flex;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        justify-self: center;
+                        height: 100%;
+                        padding: 60px 20px 20px 35px;
+
+                        .info__item {
+                            height: 33%;
+
+                            .item__header {
+                                font: 700 18px $fh2;
+                            }
+
+                            .item__text {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

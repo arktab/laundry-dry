@@ -1,0 +1,64 @@
+.feedback {
+    background: $cllblue;
+    color: $white;
+
+    .container {
+
+
+        .feedback__profile {
+            width: 100%;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 50px;
+
+
+            .profile__photo {
+                width: 20%;
+                //width: 80px;
+                //height: 80px;
+                //float: left;
+            }
+
+            .profile__text {
+                width: 80%;
+                height: 75px;
+                font-size: .75em;
+                padding: 10px 0 0 0;
+                background: url('../images/“”.png') no-repeat top left;
+                border-bottom: 1px solid $white;
+            }
+        }
+
+        .feedback__nav {
+            padding-bottom: 50px;
+            justify-content: center;
+            
+
+            .dot__nav {
+                //background: white;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                justify-content: space-around;
+                padding: 0 50px; 
+                height: 10px;
+
+                .nav__item {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: $white;
+
+                    .nav__link {}
+                }
+            }
+        }
+    }
+}

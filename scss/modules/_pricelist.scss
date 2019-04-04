@@ -1,0 +1,108 @@
+.pricelist {
+    .container {
+        .header__row {
+            width: 100%;
+
+            .pricelist__header {
+                text-align: center;
+                width: 100px;
+                font-size: 36px;
+                text-align: center;
+                color: $cllblue;
+                margin: 0 auto;
+                display: block;
+                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+                padding: 10px 0;
+                margin-bottom: 100px;
+            }
+        }
+
+        .pricelist__row {
+            width: 100%;
+            justify-content: space-between;
+            
+
+            .tile__wrapper {
+                .pricelist__tile {
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flex;
+                    display: -o-flex;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0 auto;
+                    padding: 20px 20px;
+                    width: 95%;
+                    height: 650px;
+                    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    text-align: center;
+                    transition: all .4s;
+                    
+                    &:hover{
+                        transform: scale(1.2);
+                        
+                    }
+
+                    .tile__logo {
+                        width: 130px;
+                        height: 130px;
+                        margin-top: 20px;
+                        background: $cllblue;
+                        border-radius: 50%;
+                        color: $white;
+                        font-size: 50px;
+                        line-height: 130px;
+                        text-align: center;
+                    }
+
+                    .tile__headline {
+                        font-size: 36px;
+                        
+                    }
+
+                    .tile__text {}
+
+                    .tile__list {
+                        width: 50%;
+                        margin: 0 auto;
+                        font-size: .75em;
+                        text-align: left;
+
+
+                        .list__item {
+                            padding-left: 20px;
+                            list-style-image: url(../images/svg/checked.svg);
+                        }
+
+                    }
+
+                    .tile__price {
+                        color: $cllblue;
+                        font-weight: 700;
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            @include pos($t: -15px, $l:-15px);
+                            width: 120%;
+                            border-top: 2px solid $gray;
+
+                        }
+                    }
+
+                    .tile__button {
+                        color: $white;
+                        background: $cllblue;
+                        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+                        border-radius: 5px;
+                        width: 150px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
