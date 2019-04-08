@@ -1,7 +1,8 @@
 .header {
     width: 100%;
     height: 90vh;
-    background: lightgray;
+    background: url('../images/head.png') no-repeat center center;
+    background-size: cover;
     color: $white;
 
     .container {
@@ -18,7 +19,7 @@
             justify-content: space-between;
             align-items: center;
 
-            top__logo {
+            .top__logo {
                 width: 24%;
             }
 
@@ -34,19 +35,42 @@
 
                 .nav__item {
 
-
                     .nav__link {
-                        color: $white;
+                        display: block;
+                        text-align: center;
+                        width: 100px;
+                        padding-bottom: 10px;
+                    }
+
+                    .nav__link:hover {
+                        padding-bottom: 8px;
+                        border-bottom: 2px solid $cllblue;
                     }
                 }
             }
 
             .top__info {
-                i{
-                    color: $white;
-                    padding: 0 10px;
-                }
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                
 
+                .info__link {
+                    display: block;
+                    text-align: center;
+                    padding: 0 10px 10px 0;
+                    
+                    &:hover{
+                        padding-bottom: 8px;
+                        border-bottom: 2px solid $cllblue;
+                    }
+                }
+                i {
+                        color: $white;
+                        padding: 0 10px;
+                    }
             }
         }
 
@@ -88,6 +112,7 @@
 
                 .serv__item {
                     width: 18%;
+                    height: 180px;
                     text-align: center;
                     background: $white;
                     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
@@ -98,10 +123,10 @@
                         text-align: center;
                         width: 100px;
                         border-bottom: 2px solid $gray;
-                        margin: 0 auto;
+                        margin: 20px auto 0;
                         padding: 15px 0 20px;
 
-                        i{
+                        i {
                             position: relative;
                             z-index: 1;
                         }
@@ -123,6 +148,7 @@
                         height: 110px;
                         padding: 15px 10px 20px;
                         font-size: 16px;
+                        font-weight: 700;
                         color: $black;
                     }
                 }

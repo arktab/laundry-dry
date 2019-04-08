@@ -10,23 +10,31 @@
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
 
     <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+
 </head>
 
 <body>
     <header class="header">
         <div class="row container">
             <div class="col-xl-12 header__top">
-                <div class="top__logo"><img src="images/logo.svg" alt="logo"></div>
+                <div class="top__logo"><a href="#" class="top__link"><img src="images/logo.svg" alt="logo"></a></div>
                 <ul class="top__nav">
-                    <li class="nav__item"><a href="#" class="nav__link">Прайлист</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+                    <li class="nav__item"><a href="#pricelist" class="nav__link">Прайлист</a></li>
+                    <li class="nav__item"><a href="#feedback" class="nav__link">Отзывы</a></li>
+                    <li class="nav__item"><a href="#serv" class="nav__link">Услуги</a></li>
                 </ul>
-                <div class="top__info"><a href="tel:+38(096)49-333-22" class="info__link"><i class="icon-phone"></a></i>+38(096)49-333-22 <i class="icon-clock"></i>С 9:00 до 20:00</div>
+                <div class="top__info">
+                <a href="tel:+38(096)49-333-22" class="info__link">
+                <i class="icon-phone"></i>+38(096)49-333-22</a>
+                <a href="#location" class="info__link"><i class="icon-clock"></i>С 9:00 до 20:00</a>
+                </div>
             </div>
             <div class="col-xl-6 header__main">
                 <h1 class="main__headline">Laundry & Dry</h1>
@@ -36,7 +44,7 @@
                     ваше время и деньги.</div>
                 <button class="main__button">Узнать больше</button>
             </div>
-            <div class="row header__bottom">
+            <div class="row header__bottom" id="serv">
                 <div class="col-xl-12 header__serv">
                     <div class="serv__item">
                         <h3 class="item__logo"><i class="icon-washing"></i></h3>
@@ -62,7 +70,7 @@
             </div>
         </div>
     </header>
-    <section class="pricelist">
+    <section class="pricelist" id="pricelist">
         <div class="row container">
             <div class="row header__row">
                 <h2 class="col-xl-4 pricelist__header">Прайслист</h2>
@@ -80,7 +88,7 @@
                             <li class="list__item">Доступ к залам</li>
                             <li class="list__item">Стирка до 12 кг</li>
                         </ul>
-                        <div class="tile__price">599 грн /месяц</div>
+                        <div class="tile__price">599 грн <div class="tile__text">/месяц</div></div>
                         <button class="tile__button">Узнать больше</button>
                     </div>
                 </div>
@@ -97,7 +105,7 @@
                             <li class="list__item">Доступ к залам</li>
                             <li class="list__item">Стирка до 12 кг</li>
                         </ul>
-                        <div class="tile__price">799 грн /месяц</div>
+                        <div class="tile__price">799 грн <div class="tile__text">/месяц</div></div>
                         <button class="tile__button">Узнать больше</button>
                     </div>
                 </div>
@@ -115,14 +123,14 @@
                             <li class="list__item">Стирка до 12 кг</li>
                             <li class="list__item">Сушка костюмов</li>
                         </ul>
-                        <div class="tile__price">999 грн /месяц</div>
+                        <div class="tile__price">999 грн <div class="tile__text">/месяц</div></div>
                         <button class="tile__button">Узнать больше</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
         <div class="container">
             <div class="row profile__wraper">
                 <div class="col-xl-4 feedback__profile">
@@ -156,43 +164,45 @@
         </div>
 
     </section>
-    <section class="location">
+    <section class="location" id="location">
         <div class="container">
             <div class="row header__row">
                 <h2 class="col-xl-4 location__header">Как нас найти</h2>
             </div>
             <div class="row location__row">
-               <div class="col-xl-12 location__wrapper">
-                <div class=" location__map">
-                    <button class="map__button">Открыть карту</button>
-                </div>
-                <div class=" info__wrapper">
-                    <div class="location__info">
-                        <div class="info__item">
-                            <div class="item__header">Контакты</div>
-                            <div class="item__text">+38 (066) 148-08-48 <br>+38 (097) 455-95-62<br>+38 (099) 451-46-44</div>
-                        </div>
-                        <div class="info__item">
-                            <div class="item__header">Адрес</div>
-                            <div class="item__text">г. Киев, ул. И. Мазепы, 46
-                                Киевская область, Украина,
-                                03134</div>
-                        </div>
-                        <div class="info__item">
-                            <div class="item__header">График работы</div>
-                            <div class="item__text">
-                                <ul class="item__text">
-                                    <li class="item__list">пн: Закрыто</li>
-                                    <li class="item__list">вт: 09:00–20:00</li>
-                                    <li class="item__list">ср: 09:00–20:00</li>
-                                    <li class="item__list">чт: 09:00–20:00</li>
-                                    <li class="item__list">пт: 09:00–20:00</li>
-                                    <li class="item__list">вс: 09:00–20:00</li>
-                                </ul>
+                <div class="col-xl-12 location__wrapper">
+                    <div class=" location__map">
+                        <a href="https://her.is/2Vv7vRf" class="map__link"><button class="map__button">Открыть карту</button></a>
+                        <div id="mapContainer"></div>
+
+                    </div>
+                    <div class=" info__wrapper">
+                        <div class="location__info">
+                            <div class="info__item">
+                                <div class="item__header">Контакты</div>
+                                <div class="item__text">+38 (066) 148-08-48 <br>+38 (097) 455-95-62<br>+38 (099) 451-46-44</div>
+                            </div>
+                            <div class="info__item">
+                                <div class="item__header">Адрес</div>
+                                <div class="item__text">г. Киев, ул. И. Мазепы, 46
+                                    Киевская область, Украина,
+                                    03134</div>
+                            </div>
+                            <div class="info__item">
+                                <div class="item__header">График работы</div>
+                                <div class="item__text">
+                                    <ul class="item__text">
+                                        <li class="item__list">пн: Закрыто</li>
+                                        <li class="item__list">вт:  09:00–20:00</li>
+                                        <li class="item__list">ср: 09:00–20:00</li>
+                                        <li class="item__list">чт:  09:00–20:00</li>
+                                        <li class="item__list">пт:  09:00–20:00</li>
+                                        <li class="item__list">вс: 09:00–20:00</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -210,13 +220,13 @@
                 <div class="col-xl-3 footer__item">
                     <h3 class="item__header">Контактная информация</h3>
                     <p class="item__text">
-                    +38 (066) 148-08-48<br>
-                    +38 (097) 455-95-64</p>
+                        +38 (066) 148-08-48<br>
+                        +38 (097) 455-95-64</p>
                 </div>
                 <div class="col-xl-3 footer__item">
                     <h3 class="item__header">Адрес</h3>
                     <p class="item__text">
-                       г. Киев, ул. И. Мазепы, 46
+                        г. Киев, ул. И. Мазепы, 46
                         Киевская область, Украина</p>
                 </div>
                 <div class="col-xl-3 footer__item">
@@ -229,10 +239,30 @@
 
 
 
-    <!-- LiveReload Script -->
-    <script>
-        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
+    <!-- Maps-->
+      <script>
+    // Initialize the platform object:
+    var platform = new H.service.Platform({
+    'app_id': '{LOfGbPFkqX9oaVUVFesu}',
+    'app_code': '{ur4_Cd8q5LKn6F3MdBGMEw}'
+    });
+
+    // Obtain the default map types from the platform object
+    var maptypes = platform.createDefaultLayers();
+
+    // Instantiate (and display) a map object:
+    var map = new H.Map(
+    document.getElementById('mapContainer'),
+    maptypes.normal.map,
+    {
+      zoom: 10,
+      center: { lng: 49.568668, lat: 34.585499 }, 
+    });
+  </script>
+
+
+
+
 </body>
 
 </html>

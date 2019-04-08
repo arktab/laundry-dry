@@ -1,5 +1,6 @@
 .pricelist {
     .container {
+        padding-top: 100px;
         .header__row {
             width: 100%;
 
@@ -81,8 +82,22 @@
 
                     .tile__price {
                         color: $cllblue;
+                        font-size: 28px;
                         font-weight: 700;
                         position: relative;
+                        display: -webkit-flex;
+                        display: -moz-flex;
+                        display: -ms-flex;
+                        display: -o-flex;
+                        display: flex;
+                        align-items: flex-end;
+                        
+                        .tile__text{
+                            font-size: 14px;
+                            //line-height: 28px;
+                            padding: 0 0 3px 5px;
+                            color: $black;
+                        }
 
                         &:before {
                             content: '';
