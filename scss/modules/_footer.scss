@@ -3,12 +3,12 @@
     color: $white;
 
     .container {
-        
+
         .footer__row {
             align-content: center;
             align-items: center;
 
-            
+
             .footer__item {
                 display: -webkit-flex;
                 display: -moz-flex;
@@ -17,7 +17,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                
+
                 height: 150px;
                 padding: 20px 0;
 
@@ -30,7 +30,18 @@
 
                 .item__text {
                     font-size: 14px;
-                    
+
+                    .icon-instagram:hover {
+                      color: #517fa4;
+                    }
+
+                    .icon-facebook:hover {
+                      color: #3b5998;
+                    }
+
+                    .icon-twitter:hover{
+                      color: #00aced;
+                    }
                 }
                 .item__text:first-child{
                     display: -webkit-flex;
