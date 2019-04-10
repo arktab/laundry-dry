@@ -62,7 +62,8 @@ a {
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
-} 
+    font-family: $font; 
+}
 
 [class*="button"]:hover{
     transform: scale(1.05);
