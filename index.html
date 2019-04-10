@@ -13,7 +13,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -23,6 +23,7 @@
 <body>
     <header class="header">
         <div class="row container">
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-long-arrow-alt-up"></i></button>
             <div class="col-xl-12 header__top">
                 <div class="top__logo"><a href="#" class="top__link"><img src="images/logo.svg" alt="logo"></a></div>
                 <ul class="top__nav">
@@ -260,7 +261,27 @@
     });
   </script>
 
+  <!--navbutton.js-->
+  <script>
+      // When the user scrolls down 100px from the top of the document, show the button
+      window.onscroll = function() {
+          scrollFunction()
+      };
 
+      function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              document.getElementById("myBtn").style.display = "block";
+          } else {
+              document.getElementById("myBtn").style.display = "none";
+          }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+  </script>
 
 
 </body>
