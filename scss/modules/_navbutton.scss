@@ -8,21 +8,58 @@
     z-index: 99;
     font-size: 18px;
     line-height: 23px;
-    border: none;
     outline: none;
     background-color: $cllblue;
-    color: white;
-    cursor: pointer; 
-    //padding: 15px;
-    border-radius: 50%; 
+    color: $cllblue;
+    cursor: pointer;
+    border-radius: 50%;
     transition: all .5s;
-    border: 2px solid $white;
+    border: 2px solid $cllblue;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+
 }
 
-#myBtn:hover { 
-    border: 2px solid $cllblue;
-    //padding: -2px;
+.wave {
+    width: 100px;
+    height: 105px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-radius: 35%;
+    background: rgb(255, 255, 255);
+    animation: wave 10s infinite linear;
+    transition: all 1s;
+    z-index: -1;
 
-    background-color: $white;
-    color: $cblue;
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+#myBtn:hover {
+    border: 2px solid $white;
+    color: white;
+
+
+}
+
+#myBtn:hover .wave {
+    top: -105%;
+}
+
+@keyframes wave {
+    from {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
 }
