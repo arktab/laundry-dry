@@ -15,13 +15,15 @@
             width: 100%;
             height: 100%;
             position: relative;
-            filter: opacity(75%);
+            filter: opacity(80%);
+            //filter: grayscale(15%);
+            //filter: brightness(80%);
 
             .bg__img {
                 object-fit: cover;
                 height: 100vh;
                 width: auto;
-                
+
             }
 
             .slick-dots {
@@ -45,7 +47,7 @@
                     display: block;
                     width: 6px;
                     height: 6px;
-                    padding: 0; 
+                    padding: 0;
 
                     border: none;
                     border-radius: 50%;
@@ -55,8 +57,9 @@
                 }
 
                 li.slick-active button {
-                    transform: scale(1.5); 
-                } 
+                    background-color: $white;
+                    transform: scale(1.5);
+                }
 
             }
         }
@@ -79,7 +82,7 @@
             display: -moz-flex;
             display: -ms-flex;
             display: -o-flex;
-            display: flex; 
+            display: flex;
             justify-content: space-between;
             align-items: center;
 
