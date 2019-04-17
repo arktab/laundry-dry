@@ -197,10 +197,13 @@
             <div class="row location__row">
                 <div class="col-12 location__wrapper">
                     <div class=" location__map">
+                        <!--
                         <a href="https://her.is/2Vv7vRf" class="map__link">
-                        <button class="map__button">Открыть карту</button></a>
+                            <button class="map__button">Открыть карту</button>
+                        </a>
+-->
                         <div id="mapContainer">
-                            <a href="https://snazzymaps.com/style/1/pale-dawn" target="_blank">Pale Dawn</a>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2587.5409766500397!2d34.58355321620354!3d49.568683658383854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d82f8376579cbd%3A0x96eac9a87d549440!2z0L_RgNC-0YHQvy4g0JzQuNGA0LAsIDM2LCDQn9C-0LvRgtCw0LLQsCwg0J_QvtC70YLQsNCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDM2MDAw!5e0!3m2!1sru!2sua!4v1555523747173!5m2!1sru!2sua&z=9" width="825" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
 
                     </div>
@@ -259,7 +262,7 @@
                 </div>
                 <div class="col-3 footer__item">
                     <h3 class="item__header">E-mail</h3>
-                    <a class="item__text" href="mailto:kitpeskitpes@gmail.com">kitpeskitpes@gmail.com</a>                
+                    <a class="item__text" href="mailto:kitpeskitpes@gmail.com">kitpeskitpes@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -348,6 +351,154 @@
         var rellax = new Rellax('.rellax');
         // Destroy and create again parallax with previous settings
         rellax.refresh();
+
+    </script>
+    <script>
+        function initMap() {
+            // Styles a map in night mode.
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 40.674,
+                    lng: -73.945
+                },
+                zoom: 12,
+                styles: [{
+                        "featureType": "all",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "weight": "2.00"
+                        }]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "geometry.stroke",
+                        "stylers": [{
+                            "color": "#9c9c9c"
+                        }]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.text",
+                        "stylers": [{
+                            "visibility": "on"
+                        }]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [{
+                            "color": "#f2f2f2"
+                        }]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "color": "#f4f4f4"
+                        }]
+                    },
+                    {
+                        "featureType": "landscape.man_made",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "color": "#ffffff"
+                        }]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "all",
+                        "stylers": [{
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 45
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "color": "#eeeeee"
+                        }]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#7b7b7b"
+                        }]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{
+                            "color": "#ffffff"
+                        }]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "all",
+                        "stylers": [{
+                            "visibility": "simplified"
+                        }]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.icon",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [{
+                                "color": "#46bcec"
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry.fill",
+                        "stylers": [{
+                            "color": "#121f9f"
+                        }]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#070707"
+                        }]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{
+                            "color": "#ffffff"
+                        }]
+                    }
+                ]
+            });
+        }
 
     </script>
 </body>
