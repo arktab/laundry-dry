@@ -3,7 +3,7 @@
     color: $white;
 
     .container {
-
+        padding: 50px 20px 1px 20px;
 
         .feedback__profile {
             width: 100%;
@@ -31,31 +31,34 @@
             }
         }
 
-        .feedback__nav {
-            padding-bottom: 50px;
+        .slick-dots {
+            display: flex;
             justify-content: center;
 
+            margin: 0;
+            padding: 1rem 0;
 
-            .dot__nav {
-                //background: white;
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flex;
-                display: -o-flex;
-                display: flex;
-                justify-content: space-around;
-                padding: 0 50px;
-                height: 10px;
+            list-style-type: none;
 
-                .nav__item {
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 50%;
-                    background: $white;
+            li {
+                margin: 0 0.25rem;
+            }
 
-                    .nav__link {}
-                }
+            button {
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: $white;
+                padding: 0;
+                text-indent: -9999px;
+            }
+
+            li.slick-active button {
+                background: $white;
+                transform: scale(1.4);
             }
         }
+
     }
 }
