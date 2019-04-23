@@ -28,7 +28,7 @@
 
 <body>
     <header class="header">
-        <div class="bg rellax" data-rellax-speed="5">
+        <div class="bg rellax" data-rellax-speed="2">
             <div class="img__wrapper">
                 <img src="images/head0.png" alt="" class="bg__img">
                 <img src="images/head1.png" alt="" class="bg__img">
@@ -268,33 +268,7 @@
         </div>
     </footer>
 
-
-
-    <!-- Maps-->
-    <!--
-    <script>
-        // Initialize the platform object:
-        var platform = new H.service.Platform({
-            'app_id': '{LOfGbPFkqX9oaVUVFesu}',
-            'app_code': '{ur4_Cd8q5LKn6F3MdBGMEw}'
-        });
-
-        // Obtain the default map types from the platform object
-        var maptypes = platform.createDefaultLayers();
-
-        // Instantiate (and display) a map object:
-        var map = new H.Map(
-            document.getElementById('mapContainer'),
-            maptypes.normal.map, {
-                zoom: 10,
-                center: {
-                    lng: 49.568668,
-                    lat: 34.585499
-                },
-            });
-
-    </script>
--->
+    <!--JS-->
     <script src="js/jquery-3.4.0.min.js"></script>
     <!--SCROLL-->
     <script src="js/slick.min.js"></script>
@@ -303,7 +277,7 @@
 
             $('.img__wrapper').slick({
                 infinite: true,
-                dots: true,
+                dots: false,
                 arrows: false,
                 autoplay: true,
                 autoplaySpeed: 3000,
@@ -329,20 +303,6 @@
             scrollFunction()
         };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
     </script>
     <!--ParallaxRellaxJS-->
     <script src="js/rellax.min.js"></script>
@@ -353,154 +313,11 @@
         rellax.refresh();
 
     </script>
+    <!--MapCastomization-->
     <script>
-        function initMap() {
-            // Styles a map in night mode.
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: 40.674,
-                    lng: -73.945
-                },
-                zoom: 12,
-                styles: [{
-                        "featureType": "all",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                            "weight": "2.00"
-                        }]
-                    },
-                    {
-                        "featureType": "all",
-                        "elementType": "geometry.stroke",
-                        "stylers": [{
-                            "color": "#9c9c9c"
-                        }]
-                    },
-                    {
-                        "featureType": "all",
-                        "elementType": "labels.text",
-                        "stylers": [{
-                            "visibility": "on"
-                        }]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "all",
-                        "stylers": [{
-                            "color": "#f2f2f2"
-                        }]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                            "color": "#f4f4f4"
-                        }]
-                    },
-                    {
-                        "featureType": "landscape.man_made",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                            "color": "#ffffff"
-                        }]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "all",
-                        "stylers": [{
-                            "visibility": "off"
-                        }]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "all",
-                        "stylers": [{
-                                "saturation": -100
-                            },
-                            {
-                                "lightness": 45
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                            "color": "#eeeeee"
-                        }]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#7b7b7b"
-                        }]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "labels.text.stroke",
-                        "stylers": [{
-                            "color": "#ffffff"
-                        }]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "all",
-                        "stylers": [{
-                            "visibility": "simplified"
-                        }]
-                    },
-                    {
-                        "featureType": "road.arterial",
-                        "elementType": "labels.icon",
-                        "stylers": [{
-                            "visibility": "off"
-                        }]
-                    },
-                    {
-                        "featureType": "transit",
-                        "elementType": "all",
-                        "stylers": [{
-                            "visibility": "off"
-                        }]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "all",
-                        "stylers": [{
-                                "color": "#46bcec"
-                            },
-                            {
-                                "visibility": "on"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                            "color": "#121f9f"
-                        }]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#070707"
-                        }]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "labels.text.stroke",
-                        "stylers": [{
-                            "color": "#ffffff"
-                        }]
-                    }
-                ]
-            });
-        }
-
+        function initMap();
     </script>
+    <script src="js/castom.js"></script>
 </body>
 
 </html>
